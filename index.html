@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar with Dark Mode Toggle</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <ul class="navbar-lists" id="myTopnav">
+        <li><a class="navbar-link" href="#">Home</a></li>
+        <li><a class="navbar-link" href="#about-us-section">About Us</a></li>
+        <li><a class="navbar-link" href="#history-section">Our History</a></li>
+        <li><a class="navbar-link" href="#gallery-section">Our Gallery</a></li>
+        <li>
+          <div class="circle-heart">
+            <a href="#" onclick="dark_shifter()">
+              <img id="heart1" src="pink-heart-white.gif" alt="Pink Heart Button">
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="first">
+      <div class="line"></div>
+      <h1>KAVYA & MAHENDRA</h1>
+      <div class="line"></div>
+      <div class="countdown">
+        <p id="p1"></p>
+        <small></small>
+      </div>
+      <div class="placeholder">
+        <img src="hello-kitty1.gif" alt="Placeholder Image">
+        <p>Our Love Story</p>
+      </div>
+    </div>
+    <section class="about-us" id="about-us-section">
+      <h2>About Us</h2>
+      <div class="about-content">
+        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+        <p>We met on a beautiful day and have been inseparable ever since...</p>
+      </div>
+    </section>
+    <section class="history" id="history-section">
+      <h2>Our History</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <p>First Met - January 1, 2020</p>
+        </div>
+        <div class="timeline-item">
+          <p>First Date - February 14, 2020</p>
+        </div>
+        <div class="timeline-item">
+          <p>First Vacation - July 20, 2020</p>
+        </div>
+      </div>
+    </section>
+    <section class="gallery" id="gallery-section">
+      <h2>Our Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

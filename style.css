@@ -1,0 +1,294 @@
+/* Add your CSS variables here */
+:root {
+  --color: #e41f7b;
+  --dark-color: #2b2b2b;
+  --dark-icon-color: #fff;
+  --light-color: #f7f7f7;
+  --light-icon-color: #e41f7b;
+  --bg-color: #f7f3f9;
+  --text-color: #333;
+  --accent-color: #86003c;
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Header styles */
+.header {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-lists {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically */
+  text-align: center; /* Center the links */
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: var(--color); /* Use the defined color variable */
+  margin-right: 20px;
+  position: relative; /* Position for pseudo-element */
+  font-weight: bold;
+}
+
+.navbar-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transform-origin: bottom left;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  transform: scaleX(0);
+}
+
+.navbar-link:hover::before {
+  transform: scaleX(1);
+  background-color: var(--color); /* Change to match the color variable */
+}
+
+.circle-heart {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-left: auto; /* Push the heart icon to the right */
+}
+
+#heart1 {
+  width: 100%; /* Ensure image fills the circle */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Main section styles */
+.first {
+  text-align: center;
+  padding: 2em;
+
+  position: relative;
+}
+
+.first .line {
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin: 1em 0;
+}
+
+.first h1 {
+  font-size: 3em;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.first .countdown {
+  margin: 1em 0;
+  color: var(--accent-color);
+}
+
+.first .countdown p {
+  font-size: 2em;
+  margin: 0;
+  color: var(--accent-color);
+}
+
+
+.first .placeholder {
+  margin: 2em 0;
+}
+
+.first .placeholder img {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+}
+
+.first .placeholder p {
+  font-size: 1.2em;
+  margin: 0.5em 0 0;
+}
+
+/* About Us section */
+.about-us {
+  padding: 2em;
+  background-color: var(--light-color);
+  border-radius: 10px;
+  margin: 1em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h2 {
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.about-content img {
+  width: 150px;
+  height: auto;
+  margin-right: 1em;
+}
+
+.about-content p {
+  flex: 1;
+  font-size: 1.1em;
+}
+
+/* Our History section */
+.history {
+  padding: 2em;
+  background-color: var(--light-color);
+  border-radius: 10px;
+  margin: 1em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.history h2 {
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-item {
+  background-color: var(--bg-color);
+  border-left: 4px solid var(--accent-color);
+  padding: 1em;
+  margin: 1em 0;
+  width: 80%;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+/* Gallery section */
+.gallery {
+  padding: 2em;
+  background-color: var(--light-color);
+  border-radius: 10px;
+  margin: 1em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery h2 {
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery-grid img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .toggle-btn {
+    flex-direction: column;
+  }
+  .icon {
+    display: block;
+  }
+  .drawer {
+    display: block;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-content img {
+    margin-bottom: 1em;
+  }
+
+  .timeline-item {
+    width: 100%;
+  }
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #000;
+  color: #fff;
+}
+
+.dark-mode .header {
+  background-color: #333;
+}
+
+.dark-mode .navbar-link {
+  color: var(--color);
+}
+
+.dark-mode .navbar-link::before {
+  background-color: var(--color);
+}
+
+.dark-mode .about-us, .dark-mode .gallery {
+  background-color: #000;
+  color: #fff;
+}
+
+.dark-mode .history{
+  background-color: #000;
+  color: #000000;
+}
